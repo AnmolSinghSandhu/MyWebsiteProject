@@ -1,0 +1,13 @@
+body
+  h1 Categories
+
+  =form_tag category_search_path, method: 'get' do
+    =text_field_tag :search_item
+    =submit_tag "Search"
+
+  - @categories.each do |category|
+    div
+      h2 = link_to category.name, show_path(category.id)
+      p = category.description
+  p
+    == paginate @categories

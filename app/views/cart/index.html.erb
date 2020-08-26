@@ -1,0 +1,29 @@
+
+<% @total = 0 %>
+
+<% @cart_session.each do |each_array| %>
+<div>
+<% id = each_array['id'] %>
+<%  price_quantity = 0 %>
+<%  each_quantity = each_array['quantity'].to_f %>
+<%  each_array_id = each_array['id'].to_i %>
+<%  product = Product.where('id = ?', each_array_id ).first %>
+<p><%= product.name %></p>
+<p><%= "Quantity: #{each_quantity}" %></p>
+<p><%= "Total: #{@price_quantity = product.price * each_quantity}" %></p>
+<%= link_to "Remove from cart", delete_item_from_cart_path(id: id) %>
+<%  @total += @price_quantity %>
+</div>
+<% end %>
+
+<div><p><%= "Subtotal: #{@total}" %></p></div>
+
+
+<h1><%= current_user.inspect %></h1>
+<% if user_signed_in? %>
+<%= link_to "Checkout", checkout_path(total: @total) %>
+<% else %>
+<h5>To checkout please log in or signup.</h5>
+<li><%= link_to "Log In", user_session_path %> </li>
+<li><%= link_to "Sign Up", new_user_registration_path %> </li>
+<% end %>

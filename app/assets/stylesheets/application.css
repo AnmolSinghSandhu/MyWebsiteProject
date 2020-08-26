@@ -1,0 +1,111 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+header{
+  margin-top: 50px;
+  text-align: center;
+}
+
+nav{
+  height: 30px;
+  background: #668cff; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#668cff, #99b3ff, #ccd9ff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#668cff, #99b3ff, #ccd9ff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#668cff, #99b3ff, #ccd9ff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#668cff, #99b3ff, #ccd9ff); /* Standard syntax */
+}
+
+nav ul{
+  display: inline;
+}
+
+nav ul li{
+  font-family:sans-serif;
+  font-size: 15px;
+  display: inline-block;
+  padding-left: 10px;
+}
+
+nav ul li a:link{
+  text-decoration: none;
+}
+
+nav ul li a:hover{
+  color: #ff9933;
+}
+
+nav ul li::after{
+  padding-left: 10px;
+  content: "|" ;
+}
+
+nav ul li:last-of-type::after{
+  content: "";
+}
+
+img{
+  position: absolute;
+  height: 100px;
+  margin-top: -70px;
+  margin-left: 20px;
+  width: 300px;
+}
+
+
+
+
+
+
+ .pagination a, .pagination span.current, .pagination span.gap {
+     margin-left: -5px;
+     padding: 0 14px;
+     line-height: 38px;
+     text-decoration: none;
+     background-color: white;
+     border: 1px solid #DDD;
+     border-left-width: 0;
+     margin-bottom: 20px;
+
+ }
+
+ .pagination {
+    margin-right: 550px;
+     border-left: 1px solid #ddd;
+     .first{
+         padding : 0;
+         float: none;
+         border: none;
+     }
+     .prev {
+         padding : 0;
+         float: none;
+         border: none;
+     }
+     .page{
+         padding : 0;
+         float: none;
+         border: none;
+     }
+     .next{
+         padding : 0;
+         float: none;
+         border: none;
+     }
+     .last{
+         padding : 0;
+         float: none;
+         border: none;
+     }
+ }

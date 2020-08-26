@@ -1,0 +1,24 @@
+- @products.each do |product|
+
+  div id="product_div"
+    aside
+      p id="product_name" = product.name
+      p id="product_status" = product.status
+      p id="product_description" = product.description
+    p id="product_image" #{image_tag product.image}
+    p id="product_price"  Price: $#{product.price}
+    br
+    p id="product_qunatity" Stock Left: #{product.stock_quantity}
+    - @array = []
+    - i = 0
+    - product.stock_quantity.times { @array << i+=1}
+
+    = form_tag cart_display_path(id: product.id), method: 'post' do
+      / p = text_field_tag :quantity
+      p id="form_quantity" = select_tag "quantity", options_for_select(@array)
+      / p id="product_add_to_cart" #{link_to 'Add to Cart', cart_display_path(:product product, :quantity @search_drop), method: :post}
+
+      p id="form_Add_to_cart" = submit_tag "Add to Cart"
+
+p class="notice" #{notice}
+p class="alert" #{alert}

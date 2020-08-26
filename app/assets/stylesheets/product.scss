@@ -1,0 +1,155 @@
+// Place all the styles related to the product controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+img{
+  height: 200px;
+  width: 200px;
+}
+
+table{
+  background-color: grey;
+  border: 2px solid;
+}
+
+tr{
+  border: 2px solid;
+}
+
+h1{
+  text-align: center;
+}
+
+h3{
+  text-align: center;
+  font-weight: bold;
+  color: WHITE;
+}
+
+h4{
+  color: black;
+}
+
+form{
+  text-align: center;
+  padding: 20px 20px;
+  margin-top: 30px;
+  margin-left: 20px;
+
+}
+
+button{
+  margin-left: 5px;
+}
+
+form #id{
+  width: 500px;
+}
+
+div{
+  padding-left: 50px;
+  padding-top: 5px;
+  width: 1000px;
+  margin-left: 150px;
+  background: #cccccc;
+  background: -webkit-linear-gradient(#bfbfbf, #cccccc, #e6e6e6); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#bfbfbf, #cccccc, #e6e6e6); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#bfbfbf, #cccccc, #e6e6e6); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#bfbfbf, #cccccc, #e6e6e6); /* Standard syntax */
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  // border: 0.5px solid;
+}
+
+div p{
+  font-size: 20px;
+}
+
+
+#product_div{
+  height: 200px;
+  float: left;
+}
+
+#product_name{
+  width: 100px;
+}
+
+#product_description{
+  float: left;
+  font-size: 15px;
+  width: 400px;
+}
+
+#product_image{
+  padding-top: 10px;
+}
+
+#product_image img{
+  float: left;
+  height: 190px;
+  border: 2px solid;
+}
+
+#product_price
+{
+  float: right;
+  margin-top: -80px;
+  padding-right: 95px;
+}
+#product_qunatity
+{
+  float: right;
+  margin-top: -60px;
+  padding-right: 80px;
+}
+
+#product_status
+{
+  float: left;
+  padding-right: 20px;
+  font-size: 15px;
+  color: #ffff33;
+  text-transform: uppercase;
+}
+
+#product_add_to_cart
+{
+  float: right;
+  padding-right: 100px;
+}
+
+#product_nav_sort
+{
+  width: 1050px;
+  margin-left: 150px;
+}
+
+#product_nav_sort ul li:first-of-type::after
+{
+  content: ""
+}
+
+aside{
+  width: 500px;
+}
+
+#form_quantity
+{
+  float: right;
+  padding-bottom: 10px;
+  margin-right: -15px;
+}
+#form_Add_to_cart
+{
+  float: right;
+  padding-bottom: 10px;
+}
+
+
+// div h2{
+//   float: left;
+// }
+//
+// div p{
+//   float: left;
+// }
